@@ -1,13 +1,14 @@
 Summary:	Rael's Binary Grabber
 Name:		bgrab
-Version:	1.3.5
-Release:	2
+Version:	1.3.6
+Release:	1
 Copyright:	Free
 Group:		Networking/News
 Group(pl):	Sieciowe/News
 URL:		http://www.student.dtu.dk/~c960941/bgrab/
-Source0:	%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tgz
 Patch0:		bgrab-noreplace.patch
+Patch1:		bgrab-regex.h.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,6 +23,8 @@ crond.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+chmod 755 configure
 
 %build
 CPPFLAGS="$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -I/usr/include/ncurses"
@@ -39,17 +42,15 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install bgrab $RPM_BUILD_ROOT%{_bindir}
 
-mv -f .bgrabrc bgrabrc
-
 strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/*
 
-gzip -9nf COPYING README* bgrabrc
+gzip -9nf COPYING README*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {COPYING,README*,bgrabrc}.gz
+%doc {COPYING,README*}.gz
 
 %attr(755,root,root) %{_bindir}/*

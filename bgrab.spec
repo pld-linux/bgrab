@@ -1,8 +1,9 @@
 Summary:	Rael's Binary Grabber
+Summary(pl):	¦ci±gacz binariów Raela
 Name:		bgrab
 Version:	1.3.6
 Release:	1
-Copyright:	Free
+License:	Free
 Group:		Networking/News
 Group(de):	Netzwerkwesen/News
 Group(pl):	Sieciowe/News
@@ -22,6 +23,13 @@ extract any binary attachments included in any of those messages
 (including multipart attachments). This program does not require any
 keyboard interaction and could be fairly easily scheduled to run from
 crond.
+
+%description -l pl
+Celem tego programu jest automatyczne ¶ci±ganie binarnych za³±czników
+z grup usenetowych. Po podaniu nazwy grupy program ³±czy siê z
+serwerem news, czyta wszystkie wiadomo¶ci z grupy i wyci±ga z nich
+wszelkie binarne za³±czniki (tak¿e wieloczê¶ciowe). Program ten nie
+wymaga interakcji i mo¿e byæ w prosty sposób u¿ywany z crona.
 
 %prep
 %setup -q

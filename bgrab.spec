@@ -50,12 +50,10 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install bgrab $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf COPYING README*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc COPYING README*
 %attr(755,root,root) %{_bindir}/*

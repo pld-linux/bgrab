@@ -5,7 +5,7 @@
  
  	if (myMessage->isMultiPart()) 
 -		tfile.open(myMessage->getOutFName(),ios::app);	// ios::app for append
-+		tfile.open(myMessage->getOutFName(),ios::noreplace);	// ios::app for append
++		tfile.open(myMessage->getOutFName(),ios::noreplace|ios::out);	// ios::app for append
  	else
  		tfile.open("outfile.txt",ios::app);
  

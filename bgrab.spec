@@ -41,7 +41,8 @@ CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
 CFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"
 %configure
 
-%{__make}
+%{__make} CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions  -I%{_includedir}/ncurses"
+
 
 %install
 rm -rf $RPM_BUILD_ROOT

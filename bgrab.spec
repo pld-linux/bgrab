@@ -6,10 +6,12 @@ Copyright:	Free
 Group:		Networking/News
 Group(de):	Netzwerkwesen/News
 Group(pl):	Sieciowe/News
-URL:		http://www.student.dtu.dk/~c960941/bgrab/
-Source0:	%{name}-%{version}.tgz
+Source0:	http://www.student.dtu.dk/~c960941/bgrab/%{name}-%{version}.tgz
 Patch0:		%{name}-noreplace.patch
 Patch1:		%{name}-regex.h.patch
+URL:		http://www.student.dtu.dk/~c960941/bgrab/
+BuildRequires:	libstdc++-devel
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

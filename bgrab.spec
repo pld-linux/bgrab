@@ -6,6 +6,7 @@ Release:	2
 License:	Free
 Group:		Networking/News
 Source0:	http://www.student.dtu.dk/~c960941/bgrab/%{name}-%{version}.tgz
+# Source0-md5:	e0c8e05ce219803aa9914ae81b08ee5b
 Patch0:		%{name}-noreplace.patch
 Patch1:		%{name}-regex.h.patch
 URL:		http://www.student.dtu.dk/~c960941/bgrab/

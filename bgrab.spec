@@ -1,12 +1,13 @@
 Summary:	Rael's Binary Grabber
 Name:		bgrab
 Version:	1.3.5
-Release:	1
+Release:	2
 Copyright:	Free
 Group:		Networking/News
 Group(pl):	Sieciowe/News
 URL:		http://www.student.dtu.dk/~c960941/bgrab/
 Source0:	%{name}-%{version}.tar.gz
+Patch0:		bgrab-noreplace.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -20,6 +21,7 @@ crond.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 CPPFLAGS="$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -I/usr/include/ncurses"

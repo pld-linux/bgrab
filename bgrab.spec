@@ -2,7 +2,7 @@ Summary:	Rael's Binary Grabber
 Summary(pl):	¦ci±gacz binariów Raela
 Name:		bgrab
 Version:	1.3.6
-Release:	1
+Release:	2
 License:	Free
 Group:		Networking/News
 Source0:	http://www.student.dtu.dk/~c960941/bgrab/%{name}-%{version}.tgz

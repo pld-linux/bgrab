@@ -1,0 +1,11 @@
+--- bgrab-1.3.5/main.cc~	Mon Apr 10 22:59:38 2000
++++ bgrab-1.3.5/main.cc	Fri Sep  1 16:53:16 2000
+@@ -226,7 +226,7 @@
+ 	ofstream tfile;
+ 
+ 	if (myMessage->isMultiPart()) 
+-		tfile.open(myMessage->getOutFName(),ios::app);	// ios::app for append
++		tfile.open(myMessage->getOutFName(),ios::noreplace);	// ios::app for append
+ 	else
+ 		tfile.open("outfile.txt",ios::app);
+ 

@@ -30,12 +30,9 @@ crond.
 chmod 755 configure
 
 %build
-CPPFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g} \
-	-fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
-CXXFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g} \
-	-fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
-CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g} \
-	-I%{_includedir}/ncurses"
+CPPFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
+CFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"
 %configure
 
 %{__make}

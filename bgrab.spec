@@ -5,8 +5,6 @@ Version:	1.3.6
 Release:	1
 License:	Free
 Group:		Networking/News
-Group(de):	Netzwerkwesen/News
-Group(pl):	Sieciowe/News
 Source0:	http://www.student.dtu.dk/~c960941/bgrab/%{name}-%{version}.tgz
 Patch0:		%{name}-noreplace.patch
 Patch1:		%{name}-regex.h.patch

@@ -37,12 +37,12 @@ wymaga interakcji i mo¿e byæ w prosty sposób u¿ywany z crona.
 chmod 755 configure
 
 %build
-CPPFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
-CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
-CFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"
+CPPFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I/usr/include/ncurses"
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I/usr/include/ncurses"
+CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 %configure
 
-%{__make} CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions  -I%{_includedir}/ncurses"
+%{__make} CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions  -I/usr/include/ncurses"
 
 
 %install

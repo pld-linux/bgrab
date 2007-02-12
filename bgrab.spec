@@ -1,5 +1,5 @@
 Summary:	Rael's Binary Grabber
-Summary(pl.UTF-8):   Ściągacz binariów Raela
+Summary(pl.UTF-8):	Ściągacz binariów Raela
 Name:		bgrab
 Version:	1.3.6
 Release:	2

@@ -1,5 +1,5 @@
 Summary:	Rael's Binary Grabber
-Summary(pl):	¦ci±gacz binariów Raela
+Summary(pl.UTF-8):   ÅšciÄ…gacz binariÃ³w Raela
 Name:		bgrab
 Version:	1.3.6
 Release:	2
@@ -23,12 +23,12 @@ extract any binary attachments included in any of those messages
 keyboard interaction and could be fairly easily scheduled to run from
 crond.
 
-%description -l pl
-Celem tego programu jest automatyczne ¶ci±ganie binarnych za³±czników
-z grup usenetowych. Po podaniu nazwy grupy program ³±czy siê z
-serwerem news, czyta wszystkie wiadomo¶ci z grupy i wyci±ga z nich
-wszelkie binarne za³±czniki (tak¿e wieloczê¶ciowe). Program ten nie
-wymaga interakcji i mo¿e byæ w prosty sposób u¿ywany z crona.
+%description -l pl.UTF-8
+Celem tego programu jest automatyczne Å›ciÄ…ganie binarnych zaÅ‚Ä…cznikÃ³w
+z grup usenetowych. Po podaniu nazwy grupy program Å‚Ä…czy siÄ™ z
+serwerem news, czyta wszystkie wiadomoÅ›ci z grupy i wyciÄ…ga z nich
+wszelkie binarne zaÅ‚Ä…czniki (takÅ¼e wieloczÄ™Å›ciowe). Program ten nie
+wymaga interakcji i moÅ¼e byÄ‡ w prosty sposÃ³b uÅ¼ywany z crona.
 
 %prep
 %setup -q

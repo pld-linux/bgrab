@@ -32,8 +32,8 @@ wymaga interakcji i może być w prosty sposób używany z crona.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 chmod 755 configure
 
 %build
